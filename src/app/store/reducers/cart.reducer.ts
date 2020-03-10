@@ -9,14 +9,14 @@ export const cartReducer = (
     case ECartActions.GetCartSuccess: {
       return {
         ...state,
-        cart: action.payload
+        cart: action.payload,
       };
     }
 
     case ECartActions.GetCartFailure: {
       return {
         ...state,
-        error: action.payload.message
+        error: action.payload.message,
       };
     }
 
@@ -26,28 +26,28 @@ export const cartReducer = (
       );
       return {
         ...state,
-        cart: [...newCart, action.payload]
+        cart: [...newCart, action.payload],
       };
     }
 
     case ECartActions.AddCartItemFailure: {
       return {
         ...state,
-        error: action.payload.message
+        error: action.payload.message,
       };
     }
 
     case ECartActions.RemoveCartItemSuccess: {
       return {
         ...state,
-        cart: state.cart.filter(item => item.product.id !== action.payload)
+        cart: state.cart.filter(item => item.product.id !== action.payload),
       };
     }
 
     case ECartActions.RemoveCartItemFailure: {
       return {
         ...state,
-        error: action.payload.message
+        error: action.payload.message,
       };
     }
 
@@ -58,14 +58,14 @@ export const cartReducer = (
       cartItem.total = action.payload.total;
       return {
         ...state,
-        cart: newCart
+        cart: newCart,
       };
     }
 
     case ECartActions.ChangeCartItemFailure: {
       return {
         ...state,
-        error: action.payload.message
+        error: action.payload.message,
       };
     }
 

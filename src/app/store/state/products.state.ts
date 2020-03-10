@@ -7,5 +7,5 @@ export interface ProductsState {
 
 export const initialProductsState: ProductsState = {
   products: [],
-  error: undefined
+  error: undefined,
 };

@@ -10,7 +10,7 @@ export enum EWishlistActions {
   AddWishItemFailure = '[Wishlist] Add Wish Item Failure',
   RemoveWishItemSubmit = '[Wishlist] Remove Wish Item Submit',
   RemoveWishItemSuccess = '[Wishlist] Remove Wish Item Success',
-  RemoveWishItemFailure = '[Wishlist] Remove Wish Item Failure'
+  RemoveWishItemFailure = '[Wishlist] Remove Wish Item Failure',
 }
 
 export class GetWishlistSubmit implements Action {

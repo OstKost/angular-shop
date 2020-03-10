@@ -7,5 +7,5 @@ export interface CartState {
 
 export const initialCartState: CartState = {
   cart: [],
-  error: undefined
+  error: undefined,
 };

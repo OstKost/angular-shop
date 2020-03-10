@@ -1,8 +1,17 @@
 <div class="wishlistInfo-container">
-  <button mat-button class="wishlistInfo row" matTooltip="Последние добавленные" (click)="toggleListHandler()">
-    <mat-icon aria-hidden="false" aria-label="Like icon" color="#cfcfcf">favorite</mat-icon>
-    <span>{{count}} товара</span>
-    <mat-icon aria-hidden="false" aria-label="dropdown">keyboard_arrow_down</mat-icon>
+  <button
+    mat-button
+    class="wishlistInfo row"
+    matTooltip="Последние добавленные"
+    (click)="toggleListHandler()"
+  >
+    <mat-icon aria-hidden="false" aria-label="Like icon" color="#cfcfcf"
+      >favorite</mat-icon
+    >
+    <span>{{ count }} товара</span>
+    <mat-icon aria-hidden="false" aria-label="dropdown"
+      >keyboard_arrow_down</mat-icon
+    >
   </button>
   <app-last-wishes
     [hide]="hideList"

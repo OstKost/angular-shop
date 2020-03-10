@@ -4,7 +4,7 @@ import { AppState } from '../../store/state/app.state';
 import { map } from 'rxjs/operators';
 import {
   selectLatestWishes,
-  selectWishlistList
+  selectWishlistList,
 } from '../../store/selectors/wishlist.selector';
 import { GetWishlistSubmit } from '../../store/actions/wishlist.actions';
 import { WishItem } from '../../shared/interfaces';
@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-wishlist-info',
-  templateUrl: './wishlist-info.container.html'
+  templateUrl: './wishlist-info.container.html',
 })
 export class WishlistInfoComponent implements OnInit, OnDestroy {
   wishlist$ = this.store.pipe(

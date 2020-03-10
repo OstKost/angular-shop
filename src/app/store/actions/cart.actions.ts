@@ -13,7 +13,7 @@ export enum ECartActions {
   RemoveCartItemFailure = '[Cart] Remove Cart Item Failure',
   ChangeCartItemSubmit = '[Cart] Change Cart Item Submit',
   ChangeCartItemSuccess = '[Cart] Change Cart Item Success',
-  ChangeCartItemFailure = '[Cart] Change Cart Item Failure'
+  ChangeCartItemFailure = '[Cart] Change Cart Item Failure',
 }
 
 export class GetCartSubmit implements Action {

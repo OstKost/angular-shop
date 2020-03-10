@@ -1,9 +1,11 @@
 <div class="cartInfo">
   <div class="cart-icon">
-    <mat-icon aria-hidden="false" aria-label="Cart icon">shopping_cart</mat-icon>
+    <mat-icon aria-hidden="false" aria-label="Cart icon"
+      >shopping_cart</mat-icon
+    >
   </div>
   <span class="cartInfo-label cart-label">В корзине</span>
-  <span class="cart-value">{{count}} товаров</span>
+  <span class="cart-value">{{ count }} товаров</span>
   <span class="cartInfo-label sum-label">Сумма</span>
-  <span class="sum-value">{{total | currency:'RUB'}}</span>
+  <span class="sum-value">{{ total | currency: 'RUB' }}</span>
 </div>

@@ -3,45 +3,87 @@
   <p>
     <mat-form-field appearance="standard" class="cartForm-field">
       <mat-label>ФИО</mat-label>
-      <input matInput type="text" placeholder="Введите имя получателя" name="name" formControlName="name">
-      <mat-hint class="error" *ngIf="form.get('name').touched && form.get('name')?.errors?.required">Ваше имя необходимо
-        для заказа
+      <input
+        matInput
+        type="text"
+        placeholder="Введите имя получателя"
+        name="name"
+        formControlName="name"
+      />
+      <mat-hint
+        class="error"
+        *ngIf="form.get('name').touched && form.get('name')?.errors?.required"
+        >Ваше имя необходимо для заказа
       </mat-hint>
-      <mat-hint class="error" *ngIf="form.get('name').touched && form.get('name')?.errors?.minlength">
-        Минимум {{form.get('name')?.errors?.minlength.requiredLength}} символа
+      <mat-hint
+        class="error"
+        *ngIf="form.get('name').touched && form.get('name')?.errors?.minlength"
+      >
+        Минимум {{ form.get('name')?.errors?.minlength.requiredLength }} символа
       </mat-hint>
     </mat-form-field>
   </p>
   <p>
     <mat-form-field appearance="standard" class="cartForm-field">
       <mat-label>Телефон</mat-label>
-      <input matInput type="text" prefix="+7" mask="(000) 000 00 00" name="phone" formControlName="phone">
-      <mat-hint class="error" *ngIf="form.get('phone').touched && form.get('phone')?.errors?.required">Телефон необходим
-        для заказа
+      <input
+        matInput
+        type="text"
+        prefix="+7"
+        mask="(000) 000 00 00"
+        name="phone"
+        formControlName="phone"
+      />
+      <mat-hint
+        class="error"
+        *ngIf="form.get('phone').touched && form.get('phone')?.errors?.required"
+        >Телефон необходим для заказа
       </mat-hint>
     </mat-form-field>
   </p>
   <p>
     <mat-form-field appearance="standard" class="cartForm-field">
       <mat-label>Email</mat-label>
-      <input matInput type="text" placeholder="test@angular.com" name="email" formControlName="email">
-      <mat-hint class="error" *ngIf="form.get('email').touched && form.get('email')?.errors?.email">Email введен
-        неверное
+      <input
+        matInput
+        type="text"
+        placeholder="test@angular.com"
+        name="email"
+        formControlName="email"
+      />
+      <mat-hint
+        class="error"
+        *ngIf="form.get('email').touched && form.get('email')?.errors?.email"
+        >Email введен неверное
       </mat-hint>
     </mat-form-field>
   </p>
   <p>
     <mat-form-field appearance="standard" class="cartForm-field">
       <mat-label>Адресс доставки</mat-label>
-      <input matInput type='text' placeholder="Город, улица, дом, квартира" name="address" formControlName="address">
+      <input
+        matInput
+        type="text"
+        placeholder="Город, улица, дом, квартира"
+        name="address"
+        formControlName="address"
+      />
     </mat-form-field>
   </p>
   <p>
     <mat-form-field appearance="standard" class="cartForm-field">
       <mat-label>Комментарий</mat-label>
-      <input matInput type="text" placeholder="Дополнения, пожелания" name="comment" formControlName="comment">
+      <input
+        matInput
+        type="text"
+        placeholder="Дополнения, пожелания"
+        name="comment"
+        formControlName="comment"
+      />
     </mat-form-field>
   </p>
 
-  <button mat-raised-button color="primary" [disabled]="form.invalid">Отправить</button>
+  <button mat-raised-button color="primary" [disabled]="form.invalid">
+    Отправить
+  </button>
 </form>

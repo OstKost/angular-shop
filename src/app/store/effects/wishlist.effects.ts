@@ -15,7 +15,7 @@ import {
   AddWishItemSuccess,
   RemoveWishItemSuccess,
   RemoveWishItemFailure,
-  AddWishItemFailure
+  AddWishItemFailure,
 } from '../actions/wishlist.actions';
 import { WishlistService } from '../../shared/services/wishlist.service';
 import { selectWishlistList } from '../selectors/wishlist.selector';

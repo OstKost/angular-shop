@@ -7,7 +7,7 @@ export enum EProductsActions {
   GetProductsFailure = '[Products] Get Products Failure',
   LikeProductSubmit = '[Products] Like Product Submit',
   LikeProductSuccess = '[Products] Like Product Success',
-  LikeProductFailure = '[Products] Like Product Failure'
+  LikeProductFailure = '[Products] Like Product Failure',
 }
 
 export class GetProductsSubmit implements Action {

@@ -18,7 +18,11 @@ $angular-shop-accent: mat-palette($mat-pink, A200, A100, A400);
 $angular-shop-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$angular-shop-theme: mat-light-theme($angular-shop-primary, $angular-shop-accent, $angular-shop-warn);
+$angular-shop-theme: mat-light-theme(
+  $angular-shop-primary,
+  $angular-shop-accent,
+  $angular-shop-warn
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -27,19 +31,23 @@ $angular-shop-theme: mat-light-theme($angular-shop-primary, $angular-shop-accent
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body, li, ul {
+html,
+body,
+li,
+ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
 .container {
@@ -62,6 +70,7 @@ body {
   display: none;
 }
 
-.loading, .noItems {
+.loading,
+.noItems {
   padding-top: 40px;
 }

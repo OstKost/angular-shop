@@ -9,14 +9,14 @@ export const productsReducer = (
     case EProductsActions.GetProductsSuccess: {
       return {
         ...state,
-        products: action.payload
+        products: action.payload,
       };
     }
 
     case EProductsActions.GetProductsFailure: {
       return {
         ...state,
-        error: action.payload.message
+        error: action.payload.message,
       };
     }
 
@@ -26,14 +26,14 @@ export const productsReducer = (
       product.isLiked = action.payload.isLiked;
       return {
         ...state,
-        products
+        products,
       };
     }
 
     case EProductsActions.LikeProductFailure: {
       return {
         ...state,
-        error: action.payload.message
+        error: action.payload.message,
       };
     }
 

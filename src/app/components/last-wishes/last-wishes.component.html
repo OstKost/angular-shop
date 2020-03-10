@@ -2,20 +2,22 @@
   <ul class="latestWishes-list" *ngIf="wishes.length; else noItems">
     <li *ngFor="let wish of wishes" class="latestWishes-item">
       <div class="latestWishes-center">
-        <img [src]="wish.imageUrl" alt="Wish" class="latestWishes-img">
+        <img [src]="wish.imageUrl" alt="Wish" class="latestWishes-img" />
       </div>
       <div class="latestWishes-info">
         <span class="latestWishes-title">
-          {{wish.title}}
+          {{ wish.title }}
         </span>
         <span class="latestWishes-date">
-          {{wish.addDate | date:'dd-MM-yyyy hh:mm'}}
+          {{ wish.addDate | date: 'dd-MM-yyyy hh:mm' }}
         </span>
       </div>
     </li>
   </ul>
   <div>
-    <button mat-button (click)="handleGoToWishes()" class="latestWishes-link">Весь список</button>
+    <button mat-button (click)="handleGoToWishes()" class="latestWishes-link">
+      Весь список
+    </button>
   </div>
 </div>
 

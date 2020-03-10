@@ -10,5 +10,5 @@ export const appReducer: ActionReducerMap<AppState, any> = {
   router: routerReducer,
   products: productsReducer,
   cart: cartReducer,
-  wishlist: wishlistReducer
+  wishlist: wishlistReducer,
 };

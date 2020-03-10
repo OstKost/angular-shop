@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Effect, ofType, Actions } from '@ngrx/effects';
 import { Store, select } from '@ngrx/store';
 import { of } from 'rxjs';
-import { switchMap, withLatestFrom, catchError, map } from 'rxjs/operators';
+import { switchMap, withLatestFrom, catchError } from 'rxjs/operators';
 
 import { AppState } from '../state/app.state';
 import {
@@ -18,7 +18,7 @@ import {
   ChangeCartItemSuccess,
   ChangeCartItemFailure,
   RemoveCartItemFailure,
-  ChangeCartItemSubmit
+  ChangeCartItemSubmit,
 } from '../actions/cart.actions';
 import { CartService } from '../../shared/services/cart.service';
 import { selectCartList } from '../selectors/cart.selector';

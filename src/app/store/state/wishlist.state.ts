@@ -7,5 +7,5 @@ export interface WishlistState {
 
 export const initialWishlistState: WishlistState = {
   wishlist: [],
-  error: undefined
+  error: undefined,
 };

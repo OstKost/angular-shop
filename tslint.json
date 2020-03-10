@@ -55,7 +55,8 @@
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
     "rxjs-add": { "severity": "error" },
-    "rxjs-no-unused-add": { "severity": "error" }
+    "rxjs-no-unused-add": { "severity": "error" },
+    "no-unused-variable": true
   },
   "rulesDirectory": ["codelyzer"]
 }

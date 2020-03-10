@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Effect, ofType, Actions } from '@ngrx/effects';
 import { Store, select } from '@ngrx/store';
 import { of } from 'rxjs';
-import { switchMap, withLatestFrom, catchError, map } from 'rxjs/operators';
+import { switchMap, withLatestFrom, catchError } from 'rxjs/operators';
 
 import { AppState } from '../state/app.state';
 import {
@@ -12,7 +12,6 @@ import {
   EProductsActions,
   LikeProductSubmit,
   LikeProductSuccess,
-  LikeProductFailure
 } from '../actions/products.actions';
 import { ProductsService } from '../../shared/services/products.service';
 import { selectProductsList } from '../selectors/products.selector';

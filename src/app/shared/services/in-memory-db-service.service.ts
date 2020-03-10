@@ -1,6 +1,6 @@
-import {InMemoryDbService} from 'angular-in-memory-web-api';
-import {Product, CartItem, WishItem} from '../interfaces';
-import {PRODUCTS} from '../products';
+import { InMemoryDbService } from 'angular-in-memory-web-api';
+import { Product, CartItem, WishItem } from '../interfaces';
+import { PRODUCTS } from '../products';
 
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
@@ -8,6 +8,6 @@ export class InMemoryDataService implements InMemoryDbService {
     const wishlist: WishItem[] = [];
     const cart: CartItem[] = [];
 
-    return {products, wishlist, cart};
+    return { products, wishlist, cart };
   }
 }

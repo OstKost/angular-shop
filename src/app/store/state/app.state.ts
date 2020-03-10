@@ -14,7 +14,7 @@ export interface AppState {
 export const initialAppState: AppState = {
   products: initialProductsState,
   cart: initialCartState,
-  wishlist: initialWishlistState
+  wishlist: initialWishlistState,
 };
 
 export function getInitialState(): AppState {

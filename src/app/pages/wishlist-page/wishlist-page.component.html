@@ -1,4 +1,7 @@
-<mat-list class="container wishlist" *ngIf="wishlist$ | async as wishlist; else loading">
+<mat-list
+  class="container wishlist"
+  *ngIf="wishlist$ | async as wishlist; else loading"
+>
   <div *ngIf="wishlist.length; else noItems">
     <div *ngFor="let item of wishlist; last as last">
       <app-wishlist-item

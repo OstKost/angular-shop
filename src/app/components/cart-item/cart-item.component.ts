@@ -1,10 +1,10 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {CartItem} from '../../shared/interfaces';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { CartItem } from '../../shared/interfaces';
 
 @Component({
   selector: 'app-cart-item',
   templateUrl: './cart-item.component.html',
-  styleUrls: ['./cart-item.component.scss']
+  styleUrls: ['./cart-item.component.scss'],
 })
 export class CartItemComponent implements OnInit {
   @Input() item: CartItem;
@@ -12,11 +12,9 @@ export class CartItemComponent implements OnInit {
   @Output() countChange = new EventEmitter<CartItem>();
   @Output() favoriteHandler = new EventEmitter<CartItem>();
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onRemove(): void {
     this.deleteHandler.emit(this.item.id);
@@ -29,7 +27,7 @@ export class CartItemComponent implements OnInit {
     const newCartItem = {
       ...this.item,
       count,
-      total
+      total,
     };
     this.countChange.emit(newCartItem);
   }
