@@ -1,0 +1,18 @@
+<div class="row wishlistItem">
+  <div>
+    <img src="{{item.imageUrl}}" alt="Products image" class="wishlistItem-image">
+  </div>
+  <div>
+    <p class="wishlistItem-title">{{item.title}}</p>
+    <p class="wishlistItem-price">{{item.price | currency:'RUB'}}</p>
+    <p class="wishlistItem-date">{{item.addDate | date:'dd-MM-yyyy hh:mm'}}</p>
+  </div>
+  <div class="wishlistItem-actions">
+    <button mat-mini-fab class="wishlistItem-btn" (click)="onAddToCart()">
+      <mat-icon>add_shopping_cart</mat-icon>
+    </button>
+    <button mat-mini-fab class="wishlistItem-btn" (click)="onRemove()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</div>

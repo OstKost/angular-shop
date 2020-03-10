@@ -1,0 +1,26 @@
+<mat-list class="container wishlist" *ngIf="cart$ | async as cart; else loading">
+  <div *ngIf="cart.length; else noItems">
+    <div *ngFor="let cartItem of cart">
+      <app-cart-item
+        [item]="cartItem"
+        (deleteHandler)="removeItem($event)"
+        (countChange)="countChange($event)"
+        (favoriteHandler)="addWishHandler($event)"
+      ></app-cart-item>
+      <mat-divider></mat-divider>
+    </div>
+    <app-cart-form (submitHandler)="submitHandler($event)"></app-cart-form>
+    <div class="submitResult">
+      <pre>{{result}}</pre>
+    </div>
+  </div>
+</mat-list>
+
+<ng-template #loading>
+  <h4 class="center loading">Загрузка...</h4>
+</ng-template>
+
+<ng-template #noItems>
+  <h4 class="center noItems">Список пуст</h4>
+  <h5 class="center">Добавьте что-нибудь в корзину</h5>
+</ng-template>

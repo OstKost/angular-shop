@@ -1,0 +1,21 @@
+<mat-list class="container wishlist" *ngIf="wishlist$ | async as wishlist; else loading">
+  <div *ngIf="wishlist.length; else noItems">
+    <div *ngFor="let item of wishlist; last as last">
+      <app-wishlist-item
+        [item]="item"
+        (deleteHandler)="deleteWish($event)"
+        (addToCartHandler)="openDialog($event)"
+      ></app-wishlist-item>
+      <mat-divider *ngIf="!last"></mat-divider>
+    </div>
+  </div>
+</mat-list>
+
+<ng-template #loading>
+  <p class="center loading">Загрузка...</p>
+</ng-template>
+
+<ng-template #noItems>
+  <h4 class="center noItems">Список пуст</h4>
+  <h5 class="center">Добавьте что-нибудь в желаемое</h5>
+</ng-template>

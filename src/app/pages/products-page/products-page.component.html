@@ -1,0 +1,12 @@
+<section class="catalog" *ngIf="products$ | async as products; else loading">
+  <app-product-item
+    *ngFor="let product of products"
+    [product]="product"
+    (addToCart)="openDialog($event)"
+    (toggleLike)="likeProduct($event)"
+  ></app-product-item>
+</section>
+
+<ng-template #loading>
+  <p class="center">Загрузка...</p>
+</ng-template>

@@ -1,0 +1,26 @@
+<div class="latestWishes" [class.hide]="hide">
+  <ul class="latestWishes-list" *ngIf="wishes.length; else noItems">
+    <li *ngFor="let wish of wishes" class="latestWishes-item">
+      <div class="latestWishes-center">
+        <img [src]="wish.imageUrl" alt="Wish" class="latestWishes-img">
+      </div>
+      <div class="latestWishes-info">
+        <span class="latestWishes-title">
+          {{wish.title}}
+        </span>
+        <span class="latestWishes-date">
+          {{wish.addDate | date:'dd-MM-yyyy hh:mm'}}
+        </span>
+      </div>
+    </li>
+  </ul>
+  <div>
+    <button mat-button (click)="handleGoToWishes()" class="latestWishes-link">Весь список</button>
+  </div>
+</div>
+
+<ng-template #noItems>
+  <div class="latestWishes-center">
+    <p>Список пуст</p>
+  </div>
+</ng-template>

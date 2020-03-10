@@ -1,0 +1,40 @@
+<div class="row wishlistItem">
+  <div>
+    <img src="{{item.product.imageUrl}}" alt="Products image" class="wishlistItem-image">
+  </div>
+  <div>
+    <p class="wishlistItem-title">{{item.product.title}}</p>
+    <p class="wishlistItem-price">{{item.total | currency:'RUB'}}</p>
+  </div>
+  <div class="wishlistItem-right">
+    <div class="wishlistItem-count">
+      <span>Количество: </span>
+      <span class="wishlistItem-price">{{item.count}}</span>
+    </div>
+    <div class="wishlistItem-countActions">
+      <button
+        mat-icon-button
+        aria-label="Add count"
+        class=""
+        type='button'
+        (click)="onCountChange(1)">
+        <mat-icon>keyboard_arrow_up</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        aria-label="Sub count"
+        class="" type='button'
+        (click)="onCountChange(-1)">
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </button>
+    </div>
+    <div class="wishlistItem-actions">
+      <button mat-mini-fab (click)="addToFavorite()" class="wishlistItem-action">
+        <mat-icon>favorites</mat-icon>
+      </button>
+      <button mat-mini-fab (click)="onRemove()" class="wishlistItem-action">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

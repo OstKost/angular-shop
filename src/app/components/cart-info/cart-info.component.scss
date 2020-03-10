@@ -1,0 +1,34 @@
+.cartInfo {
+  display: grid;
+  grid-template-columns: 25px 120px minmax(120px, auto);
+  grid-template-areas: 'cart-icon cart-label cart-value' 'cart-icon sum-label sum-value';
+  column-gap: 8px;
+  justify-content: center;
+  padding: 0 16px;
+
+  .cartInfo-label {
+    font-weight: normal;
+  }
+
+  .cart-icon {
+    grid-area: cart-icon;
+    display: flex;
+    align-items: center;
+  }
+
+  .cart-label {
+    grid-area: cart-label;
+  }
+
+  .cart-value {
+    grid-area: cart-value;
+  }
+
+  .sum-label {
+    grid-area: sum-label;
+  }
+
+  .sum-value {
+    grid-area: sum-value;
+  }
+}

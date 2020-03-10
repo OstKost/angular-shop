@@ -1,0 +1,25 @@
+.wishlistItem {
+  padding: 32px;
+
+  &-image {
+    width: 100px;
+  }
+
+  &-title {
+    font-size: 24px;
+  }
+
+  &-price {
+    font-size: 18px;
+    color: gray;
+  }
+
+  &-actions {
+    margin-left: auto;
+  }
+
+  &-btn {
+    margin-left: 20px;
+  }
+}
+

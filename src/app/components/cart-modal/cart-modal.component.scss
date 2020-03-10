@@ -1,0 +1,45 @@
+.modal-container {
+  position: relative;
+}
+
+.modal-content {
+  margin-top: 24px;
+}
+
+.modal-info {
+  margin-left: 24px;
+}
+
+.modal-name {
+  font-size: 18px;
+}
+
+.modal-label {
+  min-width: 100px;
+  font-size: 16px;
+  margin-right: 16px;
+}
+
+.modal-row {
+  padding: 0;
+  margin: 16px 0;
+}
+
+.modal-field {
+  width: 170px;
+}
+
+.modal-countActions {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

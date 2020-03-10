@@ -1,0 +1,50 @@
+<form class="modal-container" [formGroup]="form" (ngSubmit)="submit()">
+  <button mat-icon-button aria-label="Close button" class="close-button" (click)="onNoClick()">
+    <mat-icon>close</mat-icon>
+  </button>
+
+  <mat-card-header class="center">
+    <mat-card-title>Добавить в корзину</mat-card-title>
+  </mat-card-header>
+
+  <div class="row modal-content">
+    <img mat-card-lg-image src="{{data.product.imageUrl}}" alt="Product image">
+    <div class="modal-info">
+      <mat-card-subtitle class="modal-name">{{data.product.title}}</mat-card-subtitle>
+      <div class="row modal-row">
+        <span class="modal-label">Количество:</span>
+        <mat-form-field appearance="outline" class="modal-field">
+          <input matNativeControl type="number" name="count" id="count" formControlName="count">
+        </mat-form-field>
+        <div class="modal-countActions">
+          <button
+            mat-icon-button
+            aria-label="Add count"
+            class=""
+            type='button'
+            (click)="onCountChange(1)">
+            <mat-icon>keyboard_arrow_up</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            aria-label="Sub count"
+            class="" type='button'
+            (click)="onCountChange(-1)">
+            <mat-icon>keyboard_arrow_down</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="row modal-row">
+        <span class="modal-label">Сумма:</span>
+        <span>{{form.value.total | currency:'RUB'}}</span>
+      </div>
+    </div>
+  </div>
+
+  <mat-card-actions class="center">
+    <button mat-raised-button color="primary">
+      <mat-icon aria-hidden="false" aria-label="Cart icon">add_shopping_cart</mat-icon>
+      <span>Добавить</span>
+    </button>
+  </mat-card-actions>
+</form>

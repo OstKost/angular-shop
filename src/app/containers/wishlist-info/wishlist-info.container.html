@@ -1,0 +1,10 @@
+<!--TODO: refactor-->
+<div *ngIf="wishlist$ | async"></div>
+<div *ngIf="wishlistLatest$ | async"></div>
+<app-wishlist-info-view
+  [count]="count"
+  [hideList]="hideList"
+  [wishes]="latestWishes"
+  (toggleList)="toggleList()"
+  (goToWishes)="goToWishes()"
+></app-wishlist-info-view>

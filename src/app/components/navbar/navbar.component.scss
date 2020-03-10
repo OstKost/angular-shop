@@ -1,0 +1,41 @@
+.header {
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px;
+
+  .nav {
+    height: 100%;
+  }
+
+  .nav-menu {
+    height: 100%;
+  }
+
+  .nav-item {
+    height: 100%;
+
+    &:nth-of-type(1) {
+      border-right: darkgray 1px solid;
+    }
+  }
+
+  .nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    height: 100%;
+    padding: 0 16px;
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: gray;
+      color: beige;
+    }
+  }
+
+  .nav-info {
+
+  }
+}

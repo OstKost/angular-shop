@@ -1,0 +1,15 @@
+.wishlistInfo {
+  height: 100%;
+  padding: 0 16px;
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+
+  &-container {
+    position: relative;
+  }
+
+  button:hover {
+    color: indianred;
+  }
+}

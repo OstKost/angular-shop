@@ -1,0 +1,15 @@
+.cartForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0 60px;
+  max-width: 600px;
+
+  &-field {
+    width: 100%;
+  }
+}
+
+.error {
+  color: red;
+}

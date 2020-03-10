@@ -1,0 +1,43 @@
+.wishlistItem {
+  padding: 32px;
+
+  &-image {
+    width: 100px;
+  }
+
+  &-title {
+    font-size: 24px;
+  }
+
+  &-count {
+    margin-right: 5px;
+  }
+
+  &-price {
+    font-size: 18px;
+    color: gray;
+  }
+
+  &-countActions {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    margin-right: 15px;
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  &-action {
+    margin-left: 20px;
+  }
+
+  &-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
